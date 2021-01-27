@@ -1,3 +1,2 @@
 # Bataille Oriental
-
-Dieses Repository dient lediglich zur Verbreitung des Quellcodes.
+Vielen Dank für das Interesse am Quellcode von Bataille Oriental.
