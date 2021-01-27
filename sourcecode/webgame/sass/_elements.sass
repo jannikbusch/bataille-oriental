@@ -1,0 +1,51 @@
+/*
+
+    Buttons
+    
+    */
+
+button.btn
+    appearance: none
+
+    cursor: pointer
+
+    font-family: proxima-noxa, sans-serif
+
+    border-radius: 1px
+
+    padding: 3px 10px
+
+    &.btn-primary
+        background-color: $btn-primary
+        border: $btn-primary-border
+        color: $btn-primary-text
+        
+        transition: all 500ms
+
+        &:hover
+            background-color: $btn-primary-hover
+            border: $btn-primary-border-hover
+            color: $btn-primary-text-hover
+
+            transition: all 1s
+            
+    &.btn-lg
+        padding: 3px 50px
+        
+    &.btn-bataille, &.btn-bet
+        border-radius: 2px
+        margin-right: 3px
+
+        &:disabled
+            background-color: $btn-primary-deactivated
+            cursor: unset
+
+            &:hover
+                background-color: $btn-primary-deactivated
+                border: $btn-primary-border
+                color: $btn-primary-text
+
+    &.btn-bet
+        border-radius: 3px
+        width: 40px
+        margin-right: 5px

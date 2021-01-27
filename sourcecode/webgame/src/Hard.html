@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jetzt spielen! &ndash; Bataille Oriental</title>
+    <link rel="stylesheet" href="https://use.typekit.net/qhp7wew.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+<body>
+    <div class="portrait">
+        Diese Seite ist nicht für Mobilgeräte optimiert.
+    </div>
+    <div class="container">
+        <div class="game">
+            <div class="story-images" id="story-images"></div>
+            <div class="game-map" id="game-map">
+                <div class="map-container">
+                    <canvas id="map" width="450" height="450">
+                        <img alt="logo" id="logo" src="assets/img/1x/logo.png">
+                        <img alt="janniko" id="janniko" src="assets/img/enemys/janniko.jpg">
+                        <img alt="tituso" id="tituso" src="assets/img/enemys/tituso.jpg">
+                        <img alt="bennjamo" id="bennjamo" src="assets/img/enemys/bennjamo.jpg">
+                    </canvas>
+                </div>
+                <div class="game-pos">
+                    Position: <span id="player-position">Start</span>
+                </div>
+            </div>
+        </div>
+        <div class="story">
+            <div class="text" id="story-text">
+                <h3 id="chapter">Spiel gestartet..</h3>
+                <h1 id="headline">Wilkommen, Fremder.</h1>
+                <div id="textarea" class="textarea">
+                    Du befindest dich am Eingang in die Welt des Bataille Oriental.
+                    Bevor du die Welt betrittst wollen wir dich darauf hinweisen,
+                    dass wir keine Haftung für eventuell auftretende Suchterscheinungen
+                    übernehmen. 
+                    <br><br>
+                    Hier geht es nicht nur um Geschicklichkeit und Glück, hier geht es
+                    vor allem darum mit der Frustration klar zu kommen, alles verlieren
+                    zu können und wieder von vorne anzufangen. 
+                    <br><br>
+                    <strong>Klicke auf "Weiter &raquo;", wenn du soweit bist.</strong>
+                </div>
+            </div>
+            <div class="card-game" id="card-game">
+                <div class="cards">
+                    <div class="dealer-card-area dealer">
+                        <p>Dealer</p>
+                        <div class="gamecard" id="dealer-card" style="background-image: url('assets/img/spielkarten/joker.svg'); background-repeat: no-repeat; background-size: contain;"></div>
+                    </div>
+                    <div class="player-card-area player">
+                        <p>Player</p>
+                        <div class="gamecard" id="player-card" style="background-image: url('assets/img/spielkarten/joker.svg'); background-repeat: no-repeat; background-size: contain;"></div>
+                    </div>
+                </div>
+                <div class="bet-area">
+                    <h3>Einsatz</h3>
+                    <div class="bet-btns"><button class="btn btn-primary btn-bet" data-value="1">1</button><button class="btn btn-primary btn-bet" data-value="2">2</button><button class="btn btn-primary btn-bet" data-value="3">3</button><button class="btn btn-primary btn-bet" data-value="4">4</button></div>
+                    <div class="info-text">Solange du am Start bist, hast du nichts zu verlieren.</div>
+                    <div class="instructions">Drücke innerhalb von 3 Sekunden eine <span>beliebige Taste</span> auf deiner Tastatur um das Mischen an dieser Stelle zu stoppen.</div>
+                </div>
+                <div class="bataille-area">
+                    <h3>Bataille?</h3>
+                    <div class="bataille-btns">
+                        <button class="btn btn-primary btn-bataille" data-value="0">Ja, verdopple meinen Einsatz!</button><button class="btn btn-primary btn-bataille" data-value="1">Nein, ich habe Angst.</button>
+                    </div>
+                </div>
+            </div>
+            <button id="continue-story" class="btn btn-primary btn-lg btn-continue">Weiter &raquo;</button>
+        </div>
+    </div>
+    <!-- includes -->
+    <script>
+        const difficulty = "hard";
+    </script>
+    <script src="assets/js/settings.js"></script>       <!-- Einstellungen -->
+    <script src="assets/js/const.js"></script>          <!-- Konstanten -->
+    <script src="assets/js/deck.js"></script>           <!-- Deck -->
+    <script src="assets/js/round.js"></script>          <!-- Player -->
+    <script src="assets/js/player.js"></script>         <!-- Round -->
+    <script src="assets/js/game.js"></script>           <!-- Zugriff auf die Gameengine -->
+    <script src="assets/js/map.js"></script>            <!-- Map-Engine -->
+    <script src="assets/text/storytext.js"></script>    <!-- Texte für die Story -->
+    <script src="assets/js/story.js"></script>          <!-- Story -->
+</body>
+</html>
