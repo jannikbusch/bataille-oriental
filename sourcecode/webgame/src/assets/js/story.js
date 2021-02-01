@@ -11,6 +11,12 @@ class Story {
         if(debugmode) console.log(`Kapitel ${this.kapitelID} — Abschnitt ${this.position}`)
         let text = getStoryText(this.kapitelID, this.position)
 
+        if(text[3] != null) {
+            storyImagesArea.style.background = "black url('assets/img/story/" + text[3] + "') no-repeat scroll center center"
+        } else {
+            storyImagesArea.style.background = "black"
+        }
+
         chapter.innerHTML = `Kapitel ${this.kapitelID}`
         headline.innerHTML = text[0]
         textarea.innerHTML = text[1]
@@ -38,10 +44,11 @@ class Story {
         if(debugmode) console.log(`Kapitel ${this.kapitelID} — Abschnitt ${this.position}`)
         let text = getStoryText(this.kapitelID, this.position)
 
-        chapter.innerHTML = `Geschafft..`
-        headline.innerHTML = "Glückwunsch!"
-        textarea.innerHTML = "Du hast es geschafft! Du hast alle drei Gegner besiegt und bist den langen Weg hier her gekommen. <br><br><strong>Du hast den Schatz des Bennjamo gefunden...</stong>"
-
+        chapter.innerHTML = ``
+        headline.innerHTML = "Sie werden weitergeleitet..."
+        textarea.innerHTML = ""
+        window.location = 'http://www.bataille-oriental.com/'
+        
         continueBtn.style.display = "none"
     }
 }
@@ -77,7 +84,8 @@ continueBtn.addEventListener(('click'), () => {
 
         // Deaktiviert die Einsatz-Buttons
         betBtns.forEach((e) => { e.disabled = true })
-        
+
+        // Läd den nächsten Story Text
         story.printText()
 
         story.continue()

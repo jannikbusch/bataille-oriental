@@ -81,8 +81,8 @@ class Map {
         let ctx = this.mapContext
 
         // default
-        var xOffset = (canvasWidth/this.mapFields)/2 + canvasWidth/this.mapFields
-        var yOffset = canvasHeight - (canvasHeight/this.mapFields)/2 
+        var xOffset = -500
+        var yOffset = -500
 
         // Wenn die neue Position in der linken Spalte ist
         if(newPosition <= this.mapFields-1){
