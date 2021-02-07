@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    background-color: black;
+
+    font-family: baskerville-display-pt, serif;
+}
+
+main {
+    margin: 100px auto;
+    text-align: center;
+}
+
+main > .quellen {
+    margin: 0 auto;
+    width: 350px;
+}
+
+main > .quellen > h1 {
+    text-transform: uppercase;
+    font-family: proxima-nova, sans-serif;
+}
+
+main > .quellen > h3 {
+    text-transform: uppercase;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    font-family: proxima-nova, sans-serif;
+}
+
+main > .quellen > h4 {
+    margin-top: 20px;
+    font-family: proxima-nova, sans-serif;
+}
+
+main > .quellen > span {
+    font-weight: 600;
+}
+
+nav {
+    margin: 0 auto;
+    width: 300px;
+}
+
+nav > ul {
+    list-style-type: none;
+}
+
+nav > ul > li {
+    margin-top: 10px
+}
+
+nav > ul > li > a {
+    display: block;
+    padding: 10px;
+    border: 3px solid white;
+
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: proxima-nova, serif;
+    font-weight: 800;
+}
+
+nav > ul > li > a:hover {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+
+footer {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    bottom: 0px;
+
+    width: 100vw;
+}
+
+footer > ul {
+    margin: 0 auto;
+    list-style-type: none;
+    text-align: center;
+}
+
+footer > ul > li {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+footer > ul > li > a {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid white;
+
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: proxima-nova, serif;
+    font-weight: 800;
+    
+    transition: border 500ms ease-out;
+}
+
+footer > ul > li > a:hover {
+    transform: scale(1.05);
+    border-bottom: 1px solid red;
+    transition: all 100ms ease-in;
+}
+
+/* Überschreiben des ersten Abstandes */
+footer > ul > li:first-child {
+    margin-left: 0px;
+}

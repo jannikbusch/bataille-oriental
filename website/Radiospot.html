@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jetzt spielen! &mdash; Bataille Oriental</title>
+    <link rel="stylesheet" href="https://use.typekit.net/qhp7wew.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <main>
+        <div class="logo">
+            <a href="https://www.bataille-oriental.de/">
+                <img src="assets/img/logo.svg" width="300px">
+            </a>
+        </div>
+        <div class="Quellen">
+            <br><br><br>
+            <h1>Radiospot</h1>
+            <br><br>
+            <audio controls>
+                <source src="assets/audio/BatailleOrientalRadiospot.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <br><br>
+            <a href="assets/audio/BatailleOrientalRadiospot.mp3">Download</a><br>
+            <small>[Rechtsklick > "Ziel speichern unter..."]</small>
+            <br><br>
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <li>
+                <a href="Plakate">
+                    Plakate
+                </a>
+            </li>
+            <li>
+                <a href="Radiospot">
+                    Radiospot
+                </a>
+            </li>
+            <li>
+                <a href="Sourcecode">
+                    Sourcecode
+                </a>
+            </li>
+            <li>
+                <a href="Quellen">
+                    Quellen
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+<script>
+    function getRandomBg(max) {
+        return Math.floor(Math.random()*Math.floor(max));
+    }
+    switch(getRandomBg(3)) {
+        case 0:
+            document.body.style.background = "url('assets/img/bg1.jpg') #000 no-repeat fixed center";
+            console.log("bg1");
+            break;
+        case 1:
+            document.body.style.background = "url('assets/img/bg2.jpg') #000 no-repeat fixed center";
+            console.log("bg2");
+            break;
+        case 2:
+            document.body.style.background = "url('assets/img/bg3.jpg') #000 no-repeat fixed center";
+            console.log("bg3");
+            break;
+    }
+</script>
+</html>

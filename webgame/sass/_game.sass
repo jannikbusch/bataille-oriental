@@ -1,0 +1,40 @@
+body
+    .container
+        .game
+            box-sizing: border-box
+            grid-column: 1
+
+            .story-images
+                display: block
+                height: 100%
+                width: 100%
+                
+            .game-map
+                display: none
+                text-align: center
+                width: 100%
+                height: 100%
+
+                margin: auto
+
+                .map-container
+                    padding-top: 50px
+                    
+                    #map
+                        background: rgb(248, 247, 246) url('../img/noise.png')
+                        border: 10px solid rgb(246, 246, 246) 
+                        border-image: url('../img/noise.png')
+                        box-shadow: 0 0 0.3px 2px rgb(0, 0, 0)
+
+                        border-radius: 3px
+
+                        transform: rotate(-1.3deg)
+
+            .game-pos
+                margin-top: 20px
+
+                span
+                    font-family: proxima-nova, sans-serif
+                    font-weight: 900
+                    text-transform: uppercase
+                    margin-left: 10px

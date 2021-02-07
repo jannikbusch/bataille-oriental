@@ -1,0 +1,44 @@
+* 
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+    font-family: baskerville-display-pt, serif
+    font-weight: 400
+
+body
+    #key-down-area
+        position: fixed
+        width: 100vw
+        height: 100vh
+        display: none
+
+    .portrait
+        display: none
+        // Nur auf kleinen Geräten anzeigen (Smartphones (portrait & landscape), 768px und darunter)
+        @media (max-width: 768px)
+            z-index: 99
+            display: block
+            position: fixed
+            width: 100vw
+            height: 100vh
+            
+            padding: 30vh 10vw 0 10vw
+            text-align: center
+            background-color: black
+            color: white
+            
+            font-size: 24px
+
+    .container
+        width: calc(100vw-(2*$story-padding))
+        max-height: calc(100vh-(2*$story-padding))
+
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: 100vh
+
+        background: rgb(241, 237, 234) url('../img/noise4.png')
+
+        @media (max-width: 768px)
+            display: none

@@ -1,0 +1,135 @@
+body
+    .container
+        .story
+            grid-column: 2
+
+            padding: $story-padding
+
+            h1
+                font-size: 24px
+                font-weight: 600
+
+                margin-bottom: 20px
+                font-family: proxima-nova, sans-serif
+                font-weight: 900
+
+            h3
+                font-size: 16px
+
+                color: $chapter-id
+
+                text-transform: uppercase
+                font-family: proxima-nova, sans-serif
+                font-weight: 600
+
+            .textarea
+                display: block
+                font-size: 16px
+
+                height: 40vh
+
+                overflow-y: hidden
+
+                margin-bottom: 20px
+
+                strong
+                    font-weight: 600
+
+            .card-game
+                display: none
+
+                overflow-y: hidden
+
+                margin-bottom: 20px
+
+                h3
+                    color: black
+                    margin-bottom: 8px
+
+                .cards
+                    display: flex
+
+                    .dealer, .player
+                        display: inline-block
+                        width: calc(167px/2 + 20px)
+                        text-align: center
+
+                        &.winner
+                            background: rgb(206, 248, 224)
+                        &.loser
+                            background: rgb(248, 206, 206)
+                        &.bataille
+                            background: rgb(248, 223, 206)
+
+                        .gamecard
+                            display: inline-block
+                            margin: 0 auto
+
+                            width: calc(167px/2)
+                            height: calc(234px/2)
+
+                    
+                .bet-area, .bataille-area
+                    margin-top: 30px
+
+                    .info-text
+                        font-size: 16px
+                        margin-top: 10px
+
+                    .instructions
+                        font-family: 'proxima-nova', sans-serif
+                        font-size: 14px
+                        margin-top: 20px
+                        width: 400px
+                        span
+                            font-family: 'proxima-nova', sans-serif
+                            font-weight: 800
+
+                .bataille-area
+                    display: none
+
+            .btn-continue
+                position: fixed
+
+                z-index: 1
+
+                bottom: 30px
+                right: 30px
+
+                width: 250px
+                height: 50px
+
+                font-weight: 900
+
+                &.showAnimation
+                    animation-name: btn-continue-animation
+                    animation-duration: 1s
+
+@keyframes btn-continue-animation
+    0%
+        transform: scale(1.1)
+        box-shadow: none
+    10%
+        box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.1)
+    20%
+        box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.2)
+    30%
+        box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.3)
+    40%
+        box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.2)
+    50%
+        background: rgb(31, 18, 18)
+        box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.1)
+    60%
+        box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.2)
+    70%
+        transform: scale(0.95)
+        box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.3)
+    80%
+        background: rgb(0, 0, 0)
+        box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0)
+    90%
+        box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.1)
+    100%
+        transform: scale(1)
+        box-shadow: none
